@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Charleston Bachelorette Parties | Charleston Girls Night Out</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS (Mirrors main page for consistency) -->
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            padding-top: 72px; /* For fixed navbar */
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .hero-section .gif-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 1;
+            transform: translateX(-50%) translateY(-50%);
+            object-fit: cover;
+            opacity: 0.4;
+        }
+
+        .hero-section .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,1) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);
+            letter-spacing: 1.5px;
+            color: #fff;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 60vh;
+            }
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+        }
+
+        /* --- Content Sections --- */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .section-title, .article-h2 {
+            font-family: 'Playfair Display', serif;
+            color: #d4af37; /* A classy gold color */
+            margin-bottom: 1.5rem;
+            font-size: 2.75rem;
+        }
+
+        .article-h2 {
+            margin-top: 2.5rem;
+        }
+        
+        .highlight-text {
+            color: #d4af37;
+            font-weight: 500;
+        }
+        
+        .custom-card {
+            background-color: #111;
+            border: 1px solid #333;
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .btn-gold {
+            background-color: #d4af37;
+            border-color: #d4af37;
+            color: #000;
+            font-weight: bold;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-gold:hover {
+            background-color: #c8a435;
+            border-color: #c8a435;
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        .list-group-item {
+            background-color: transparent;
+            border-color: #333;
+            color: #fff;
+        }
+        
+        footer {
+            background-color: #111;
+            padding: 30px 0;
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div class="container">
+            <a class="navbar-brand" style="font-family: 'Playfair Display', serif;" href="index.html">Nightlife Charleston</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="bachelorette.html">Bachelorette</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#venue">Venue</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#booking">Table Bookings</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <img src="https://media.giphy.com/media/a1sHiPmbIlyz5hgUiI/giphy.gif" alt="Woman dancing in a stylish bar" class="gif-background">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 class="display-1">The Ultimate Bachelorette Experience</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="text-center">
+                             <h2 class="section-title">One Last Dance Before the Big "I Do"</h2>
+                             <p class="lead text-white-50 mb-5">The bachelorette party isn't just a party; it's a rite of passage. It's that one final, unforgettable celebration of friendship, freedom, and the future. When it comes to planning this momentous occasion, the pressure is on to create an experience that's as unique and amazing as the bride-to-be. While brunch and spa days have their charm, nothing captures the sheer, unadulterated joy of this moment quite like a night out at a premier nightclub. It’s more than just music and drinks; it’s an entire universe of energy, excitement, and endless possibilities, all curated for one perfect night.</p>
+                        </div>
+
+                        <article>
+                            <h3 class="article-h2">Why a Nightclub is the Perfect Bachelorette Destination</h3>
+                            <p>Imagine this: the lights are low, the bass is pulsing through the floor, and a wave of collective energy washes over you. This is the magic of a nightclub. It's a pre-built atmosphere of celebration, eliminating all the stress of planning. Forget decorating, curating a playlist, or cleaning up afterward. At a club like this in Charleston, the scene is already set for an epic night. The world-class DJs are spinning tracks that make you want to move, the lighting systems are creating a visual spectacle, and the entire venue is designed for one purpose: to have an incredible time. You and your bridal party can simply walk in and immerse yourselves in the experience, focusing on what truly matters—celebrating the bride.</p>
+                            
+                            <h3 class="article-h2">The Allure of the VIP Experience</h3>
+                            <p>A bachelorette party is all about making the bride feel like the queen she is, and nothing says "royalty" quite like the VIP treatment. Booking a private table with bottle service elevates the entire night from a simple outing to an exclusive event. There’s no waiting in line at the bar or struggling to find a space for your group. Instead, you have a luxurious, designated home base for the evening. A dedicated server ensures your glasses are never empty, allowing for uninterrupted conversation, laughter, and, of course, dancing. It provides a perfect balance—a private space to catch your breath and share stories, right in the heart of the action. This level of pampering and exclusivity is the ultimate way to honor the bride and show her how much she means to her crew.</p>
+
+                            <h3 class="article-h2">A Night of Freedom and Unforgettable Memories</h3>
+                            <p>There's something uniquely liberating about losing yourself on a dance floor. It's a place to let go of wedding planning stress, to connect with your best friends on a primal level, and to simply be in the moment. The shared experience of dancing to your favorite songs, singing at the top of your lungs, and laughing until your sides hurt creates memories that last a lifetime. A nightclub provides the perfect, high-energy backdrop for these core memories. The dynamic environment ensures there's never a dull moment. From the anticipation of getting ready together to the final dance of the night, a nightclub bachelorette party is a story waiting to be written—one filled with glamour, excitement, and the unbreakable bond of friendship.</p>
+                        </article>
+
+                        <!-- Alternative Entertainment -->
+                        <div class="custom-card">
+                            <h3 class="article-h2 text-center">Customize Your Celebration</h3>
+                            <p class="lead text-white-50 text-center">Want to add another layer of excitement to your bachelorette festivities? Charleston's vibrant entertainment scene offers incredible options to complement your night out.</p>
+                            <p class="mt-4">Before hitting the dance floor, consider starting your evening with a different kind of show. The city is home to fantastic <span class="highlight-text">comedy clubs</span> for a night of laughs, or you can take in a dazzling <span class="highlight-text">drag or burlesque performance</span> for some truly unforgettable entertainment. These shows are perfect for breaking the ice and setting a fun, celebratory tone for the rest of the evening.</p>
+                            <p>For those seeking a more exclusive and personalized experience, you can bring the entertainment directly to you. For a private party at your rental or hotel, booking a professional <span class="highlight-text">male entertainer</span> is a classic and thrilling bachelorette party highlight. While Charleston has many options, the premier choice for a tasteful and exciting performance is <span class="highlight-text">Michael At Your Place in Charleston, SC</span>. His professionalism and energy guarantee a memorable show that will be the talk of the weekend.</p>
+                             <div class="text-center mt-4">
+                                <a href="https://michaelchs.blog" target="_blank" class="btn btn-gold">Book Private Entertainment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charleston Local Guide -->
+        <section class="content-section bg-dark">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Your Charleston Bachelorette Headquarters</h2>
+                    <p class="lead text-white-50">Discover why the Holy City is the nation's top choice for bachelorette parties.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <h4>The Bachelorette Capital of the South</h4>
+                        <p>There's a reason Charleston has become synonymous with bachelorette weekends. It's a city that perfectly blends historic charm with a modern, vibrant pulse. During the day, you can explore the pastel-colored houses on Rainbow Row, shop the boutiques on <span class="highlight-text">King Street</span>, relax on Folly Beach, or indulge in a world-class culinary scene. The city is incredibly walkable, allowing your party to effortlessly transition from a charming brunch spot to a rooftop bar with stunning views. This unique combination of sophisticated activities and high-energy nightlife makes it the ideal backdrop for a memorable celebration.</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <h4>Eats Near (28 Ann Street)</h4>
+                        <p>Fuel up before your big night out! Our location is surrounded by some of Charleston's best restaurants:</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><span class="highlight-text">Husk:</span> A celebrated icon of Southern cuisine. (Fine Dining)</li>
+                            <li class="list-group-item"><span class="highlight-text">The Ordinary:</span> An upscale seafood hall in a stunning former bank. (Fine Dining)</li>
+                            <li class="list-group-item"><span class="highlight-text">Prohibition:</span> Fantastic cocktails and sophisticated American fare. (Mid-Range)</li>
+                            <li class="list-group-item"><span class="highlight-text">Indaco:</span> Rustic, delicious Italian food perfect for groups. (Mid-Range)</li>
+                            <li class="list-group-item"><span class="highlight-text">Benny Palmetto's:</span> The perfect spot for a quick, giant slice of pizza. (Casual)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Deco Charleston</p>
+            <p class="text-white-50">28 Ann Street, Charleston, SC</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

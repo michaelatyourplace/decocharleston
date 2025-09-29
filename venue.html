@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Venue | Deco Charleston</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS (Mirrors main page for consistency) -->
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            padding-top: 72px; /* For fixed navbar */
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: #000 url('https://images.pexels.com/photos/2747446/pexels-photo-2747446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+        }
+
+        .hero-section .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,1) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);
+            letter-spacing: 1.5px;
+            color: #fff;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 60vh;
+            }
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+        }
+
+        /* --- Content Sections --- */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .section-title, .article-h2 {
+            font-family: 'Playfair Display', serif;
+            color: #d4af37; /* A classy gold color */
+            margin-bottom: 1.5rem;
+            font-size: 2.75rem;
+        }
+        
+        .article-h2 {
+             margin-top: 2.5rem;
+        }
+
+        .highlight-text {
+            color: #d4af37;
+            font-weight: 500;
+        }
+        
+        .custom-card {
+            background-color: #111;
+            border: 1px solid #333;
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .btn-gold {
+            background-color: #d4af37;
+            border-color: #d4af37;
+            color: #000;
+            font-weight: bold;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-gold:hover {
+            background-color: #c8a435;
+            border-color: #c8a435;
+            color: #000;
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            background-color: #111;
+            padding: 30px 0;
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div class="container">
+            <a class="navbar-brand" style="font-family: 'Playfair Display', serif;" href="index.html">Deco Charleston</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bachelorette.html">Bachelorette</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="venue.html">Venue</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#booking">Table Bookings</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 class="display-1">The Venue</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="text-center">
+                             <h2 class="section-title">Designed for the Ultimate Nightlife Experience</h2>
+                             <p class="lead text-white-50 mb-5">A truly great nightclub is more than just a room with a sound system; it’s a meticulously crafted environment designed to create an unforgettable sensory journey. The layout is the foundation of this experience, dictating the flow of energy and the interaction of its guests. At Deco Charleston, every square foot has been thoughtfully considered to maximize enjoyment, comfort, and excitement.</p>
+                        </div>
+
+                        <article>
+                            <h3 class="article-h2">The Art of Flow: Creating Distinct Zones</h3>
+                            <p>The best nightclub layouts avoid a single, chaotic space. Instead, they feature distinct yet interconnected zones that cater to different moods and activities. The heart of the club is, of course, the <span class="highlight-text">dance floor</span>—an open, energetic space with sightlines to the DJ booth, which serves as the command center of the night. Surrounding this core should be strategically placed, easily accessible <span class="highlight-text">bar areas</span> to prevent crowding and ensure quick service.</p>
+                            <p>For those moments when you want to step back from the intensity, comfortable <span class="highlight-text">lounge and seating areas</span> are crucial. These spaces offer a place for conversation and relaxation without feeling disconnected from the main energy. The transition between these zones should feel natural and intuitive, guiding guests effortlessly from one experience to another.</p>
+
+                            <h3 class="article-h2">Exclusivity and Comfort: The Power of VIP</h3>
+                            <p>An essential element of a premier nightclub is the availability of exclusive spaces. Elevated <span class="highlight-text">VIP sections and private tables</span> provide a sense of luxury and comfort that enhances the night. These areas should offer the best views of the action while providing a degree of privacy. A well-designed VIP experience means guests feel both part of the crowd and above it, with dedicated service that makes them feel like the most important people in the room. This multi-layered approach to the guest experience is what separates a good club from a legendary one.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Private Events CTA -->
+        <section class="content-section bg-dark">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <div class="custom-card">
+                            <h2 class="section-title">Make Our Space, Your Space</h2>
+                            <p class="lead text-white-50">Experience the pinnacle of Charleston nightlife by hosting your next private event at Deco. Our versatile layout can be adapted for corporate functions, birthday celebrations, and exclusive private parties. Let us provide the unforgettable backdrop for your next big occasion.</p>
+                            <a href="index.html#booking" class="btn btn-gold mt-4">Inquire About Venue Booking</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Deco Charleston</p>
+            <p class="text-white-50">28 Ann Street, Charleston, SC</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
