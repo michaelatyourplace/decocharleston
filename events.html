@@ -1,214 +1,552 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upcoming Events | Charleston</title>
+<!-- Charleston Big Shows & Bar Crawls Section -->
+<!-- Self-contained Bootstrap-compatible section with custom styles -->
+<!-- Google Fonts loaded inline — remove if already loaded in your <head> -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
-    <!-- Custom CSS (Mirrors main page for consistency) -->
     <style>
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: 'Roboto', sans-serif;
-            padding-top: 72px; /* For fixed navbar */
-        }
-
-        /* --- Hero Section --- */
-        .hero-section {
-            position: relative;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-            background-color: #000;
-        }
-
-        .hero-section .gif-background {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: 1;
-            transform: translateX(-50%) translateY(-50%);
-            object-fit: cover;
-            opacity: 0.4;
-        }
-
-        .hero-section .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,1) 100%);
-            z-index: 2;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 3;
-        }
-
-        .hero-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 5rem;
-            font-weight: 700;
-            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);
-            letter-spacing: 1.5px;
-            color: #fff;
-        }
-        
-        @media (max-width: 768px) {
-            .hero-section {
-                height: 60vh;
-            }
-            .hero-content h1 {
-                font-size: 3rem;
-            }
-        }
-
-        /* --- Content Sections --- */
-        .content-section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            color: #d4af37; /* A classy gold color */
-            margin-bottom: 1.5rem;
-            font-size: 2.75rem;
-        }
-        
-        .highlight-text {
-            color: #d4af37;
-            font-weight: 500;
-        }
-        
-        .custom-card {
-            background-color: #111;
-            border: 1px solid #333;
-            padding: 2.5rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-        }
-
-        .btn-gold {
-            background-color: #d4af37;
-            border-color: #d4af37;
-            color: #000;
-            font-weight: bold;
-            padding: 12px 30px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .btn-gold:hover {
-            background-color: #c8a435;
-            border-color: #c8a435;
-            color: #000;
-            transform: translateY(-2px);
-        }
-        
-        footer {
-            background-color: #111;
-            padding: 30px 0;
-            border-top: 1px solid #333;
-        }
+      /* ── Scoped to this section only ── */
+      #big-shows-section {
+        --bs-gold: #D4A843;
+        --bs-red:  #C93030;
+        --bs-ink:  #0f0f0f;
+        --bs-dim:  #1a1a1a;
+        --bs-muted: #2e2e2e;
+        --bs-border: rgba(212,168,67,.2);
+        --bs-text: #e8e0d0;
+        --bs-fade: rgba(232,224,208,.55);
+        background: var(--bs-ink);
+        color: var(--bs-text);
+        font-family: 'DM Sans', sans-serif;
+        padding: 5rem 0 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+    
+      /* Grain texture overlay */
+      #big-shows-section::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: 0;
+      }
+    
+      #big-shows-section .container { position: relative; z-index: 1; }
+    
+      /* ── Header ── */
+      .bss-eyebrow {
+        font-family: 'DM Sans', sans-serif;
+        font-size: .75rem;
+        font-weight: 500;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+        color: var(--bs-gold);
+        margin-bottom: .6rem;
+      }
+    
+      .bss-headline {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(3rem, 8vw, 6rem);
+        line-height: 1;
+        color: #fff;
+        margin: 0 0 .4rem;
+        letter-spacing: .02em;
+      }
+    
+      .bss-headline span {
+        color: var(--bs-gold);
+      }
+    
+      .bss-sub {
+        color: var(--bs-fade);
+        font-size: 1rem;
+        font-weight: 300;
+        max-width: 580px;
+        margin: 0 auto 3.5rem;
+        line-height: 1.65;
+      }
+    
+      /* ── HERO CARD — Building 64 ── */
+      .bss-hero {
+        background: var(--bs-dim);
+        border: 1px solid var(--bs-border);
+        border-radius: 4px;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 2rem;
+        min-height: 340px;
+        position: relative;
+      }
+    
+      .bss-hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border: 2px solid transparent;
+        border-radius: 4px;
+        background: linear-gradient(135deg, rgba(212,168,67,.3), transparent 50%) border-box;
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+    
+      .bss-hero-visual {
+        background: linear-gradient(135deg, #1a0a00 0%, #2a1500 40%, #0a0a0a 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2.5rem;
+        position: relative;
+        overflow: hidden;
+      }
+    
+      .bss-hero-visual::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse at 30% 60%, rgba(212,168,67,.18) 0%, transparent 65%);
+      }
+    
+      .bss-b64-logo {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 5rem;
+        color: var(--bs-gold);
+        line-height: 1;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+    
+      .bss-b64-logo small {
+        display: block;
+        font-family: 'DM Sans', sans-serif;
+        font-size: .65rem;
+        font-weight: 500;
+        letter-spacing: .25em;
+        color: rgba(212,168,67,.65);
+        margin-top: .25rem;
+      }
+    
+      .bss-b64-badge {
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+        background: var(--bs-red);
+        color: #fff;
+        font-size: .6rem;
+        font-weight: 500;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        padding: .3rem .6rem;
+        border-radius: 2px;
+      }
+    
+      .bss-hero-body {
+        padding: 2.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+      }
+    
+      .bss-hero-body h2 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 2rem;
+        letter-spacing: .04em;
+        color: #fff;
+        margin: 0;
+        line-height: 1.1;
+      }
+    
+      .bss-hero-body p {
+        color: var(--bs-fade);
+        font-size: .9rem;
+        line-height: 1.65;
+        margin: 0;
+        font-weight: 300;
+      }
+    
+      .bss-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+        margin: .25rem 0;
+      }
+    
+      .bss-tag {
+        background: rgba(212,168,67,.1);
+        border: 1px solid rgba(212,168,67,.25);
+        color: var(--bs-gold);
+        font-size: .7rem;
+        font-weight: 500;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        padding: .25rem .6rem;
+        border-radius: 2px;
+      }
+    
+      .bss-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: .45rem;
+        padding: .65rem 1.4rem;
+        font-family: 'DM Sans', sans-serif;
+        font-size: .8rem;
+        font-weight: 500;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 2px;
+        transition: all .18s ease;
+        cursor: pointer;
+      }
+    
+      .bss-btn-gold {
+        background: var(--bs-gold);
+        color: var(--bs-ink);
+        border: 1px solid var(--bs-gold);
+      }
+    
+      .bss-btn-gold:hover {
+        background: #e6b84d;
+        color: var(--bs-ink);
+        text-decoration: none;
+      }
+    
+      .bss-btn-outline {
+        background: transparent;
+        color: var(--bs-gold);
+        border: 1px solid rgba(212,168,67,.4);
+      }
+    
+      .bss-btn-outline:hover {
+        background: rgba(212,168,67,.08);
+        color: var(--bs-gold);
+        border-color: var(--bs-gold);
+        text-decoration: none;
+      }
+    
+      .bss-btn-red {
+        background: var(--bs-red);
+        color: #fff;
+        border: 1px solid var(--bs-red);
+      }
+    
+      .bss-btn-red:hover {
+        background: #e03535;
+        color: #fff;
+        text-decoration: none;
+      }
+    
+      /* ── Section divider ── */
+      .bss-divider {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 2.5rem 0 1.75rem;
+      }
+    
+      .bss-divider-line {
+        flex: 1;
+        height: 1px;
+        background: var(--bs-border);
+      }
+    
+      .bss-divider-label {
+        font-family: 'DM Sans', sans-serif;
+        font-size: .7rem;
+        font-weight: 500;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+        color: var(--bs-gold);
+        white-space: nowrap;
+      }
+    
+      /* ── Event/Venue Cards ── */
+      .bss-card {
+        background: var(--bs-dim);
+        border: 1px solid rgba(255,255,255,.07);
+        border-radius: 4px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+        height: 100%;
+        transition: border-color .18s ease, transform .18s ease;
+        position: relative;
+        overflow: hidden;
+      }
+    
+      .bss-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--bs-gold), transparent);
+        opacity: 0;
+        transition: opacity .25s ease;
+      }
+    
+      .bss-card:hover {
+        border-color: rgba(212,168,67,.3);
+        transform: translateY(-2px);
+      }
+    
+      .bss-card:hover::before { opacity: 1; }
+    
+      .bss-card-icon {
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+    
+      .bss-card h3 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 1.3rem;
+        letter-spacing: .05em;
+        color: #fff;
+        margin: 0;
+        line-height: 1.1;
+      }
+    
+      .bss-card p {
+        color: var(--bs-fade);
+        font-size: .85rem;
+        line-height: 1.6;
+        margin: 0;
+        font-weight: 300;
+        flex: 1;
+      }
+    
+      .bss-card-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .4rem;
+        margin-top: .25rem;
+      }
+    
+      /* ── Address strip ── */
+      .bss-address {
+        font-size: .75rem;
+        color: rgba(232,224,208,.4);
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        gap: .4rem;
+      }
+    
+      .bss-address::before {
+        content: '▸';
+        color: var(--bs-gold);
+        font-size: .6rem;
+      }
+    
+      /* ── Responsive ── */
+      @media (max-width: 768px) {
+        .bss-hero { grid-template-columns: 1fr; }
+        .bss-hero-visual { min-height: 180px; }
+        .bss-b64-logo { font-size: 3.5rem; }
+      }
     </style>
-</head>
-<body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
-        <div class="container">
-            <a class="navbar-brand" style="font-family: 'Playfair Display', serif;" href="index.html"> Charleston</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="charleston-bachelorette-weekend.html">Bachelorette</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="events.html">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="charleston-bachelorette-weekend.html">Bachelorettes Charleston</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="bach-girls-night-out.html">Girls Night</a>
-                    </li>
-                </ul>
-            </div>
+    
+    <section id="big-shows-section">
+      <div class="container">
+    
+        <!-- Section Header -->
+        <div class="text-center">
+          <p class="bss-eyebrow">Charleston Nightlife</p>
+          <h2 class="bss-headline">Big Shows.<br><span>Bar Crawls.</span><br>Live Crazy.</h2>
+          <p class="bss-sub">From warehouse raves at the Navy Yard to 1,500-person King Street crawls — here's where Charleston turns it all the way up.</p>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero-section">
-        <img src="https://media.giphy.com/media/cZDmkKOuGWaEendLl9/giphy.gif" alt="Animated character fighting in a city street at night" class="gif-background">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1 class="display-1">Upcoming Events</h1>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-        <section class="content-section">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="section-title">Our Calendar is Currently Clear</h2>
-                        <p class="lead text-white-50 mb-4">There are no public events scheduled at this time. Our team is busy curating the next wave of unforgettable nights.</p>
-                        <p>For the latest announcements on DJ sets, themed parties, and special performances, be sure to follow us on our social media channels. You'll be the first to know when new events are added to the calendar.</p>
-                        <!-- Add social media links here when available -->
-                    </div>
-                </div>
+    
+        <!-- ══ BUILDING 64 HERO ══ -->
+        <div class="bss-hero">
+          <div class="bss-hero-visual">
+            <div class="bss-b64-logo">
+              64
+              <small>Building Sixty Four</small>
             </div>
-        </section>
-
-        <!-- Private Events CTA -->
-        <section class="content-section bg-dark">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10 text-center">
-                        <div class="custom-card">
-                            <h2 class="section-title">Host Your Own Unforgettable Event</h2>
-                            <p class="lead text-white-50">Looking to make Charleston your own for a night? Our venue is the perfect, high-energy backdrop for private parties, corporate events, birthdays, and more.</p>
-                            <p>With a state-of-the-art sound system, dynamic lighting, and luxurious VIP areas, we can help you create a custom experience that your guests will never forget. Let our team handle the details while you enjoy the celebration.</p>
-                            <a href="index.html#booking" class="btn btn-gold mt-4">Inquire About Private Bookings</a>
-                        </div>
-                    </div>
-                </div>
+            <span class="bss-b64-badge">Featured Venue</span>
+          </div>
+          <div class="bss-hero-body">
+            <h2>Building 64 — Navy Yard Charleston</h2>
+            <div class="bss-meta">
+              <span class="bss-tag">Live Shows</span>
+              <span class="bss-tag">DJ Events</span>
+              <span class="bss-tag">Private Hire</span>
+              <span class="bss-tag">North Charleston</span>
             </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="container">
-            <p class="mb-0">&copy; 2025 Deco Charleston</p>
+            <p>A historic naval base building turned full-throttle event venue at the Navy Yard Charleston campus. Home to killer events like Kulture Klash, Wu-Tang's Ghostface Killah live, and the Highwater After Party — Building 64 brings big-production energy to a truly one-of-a-kind backdrop. Immersive lighting, professional sound production, and the kind of nights people actually remember.</p>
+            <div class="bss-address">2301 Noisette Blvd, North Charleston, SC 29405</div>
+            <div class="d-flex flex-wrap gap-2 mt-1">
+              <a href="https://www.building64.com/events" class="bss-btn bss-btn-gold" target="_blank">See All Events</a>
+              <a href="https://www.honeybook.com/widget/building64_289125/cf_id/67ca2e268abe650026e8c625" class="bss-btn bss-btn-outline" target="_blank">Book the Venue</a>
+              <a href="https://www.instagram.com/building_64/" class="bss-btn bss-btn-outline" target="_blank">@building_64</a>
+            </div>
+          </div>
         </div>
-    </footer>
-
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
+    
+        <!-- ══ BAR CRAWL ORGANIZERS ══ -->
+        <div class="bss-divider">
+          <div class="bss-divider-line"></div>
+          <span class="bss-divider-label">Bar Crawl Organizers</span>
+          <div class="bss-divider-line"></div>
+        </div>
+    
+        <div class="row g-3 mb-2">
+    
+          <div class="col-lg-4 col-md-6">
+            <div class="bss-card">
+              <div class="bss-card-icon">🍀</div>
+              <h3>Blue Steel Productions</h3>
+              <div class="bss-meta">
+                <span class="bss-tag">Local Organizer</span>
+                <span class="bss-tag">King Street</span>
+              </div>
+              <p>Charleston's only locally hosted bar crawl company — 9+ years running. Known for the massive St. Paddy's King Street Crawl with 1,000+ crawlers, themed costume contests, and drink specials negotiated directly with the city's best bars. They actually confirm bar participation — no scammy ghost crawls here.</p>
+              <div class="bss-card-links">
+                <a href="https://bluesteelproductionsllc.com/" class="bss-btn bss-btn-gold" target="_blank">Blue Steel Productions</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6">
+            <div class="bss-card">
+              <div class="bss-card-icon">🦅</div>
+              <h3>Crawl With US</h3>
+              <div class="bss-meta">
+                <span class="bss-tag">National Organizer</span>
+                <span class="bss-tag">125+ Cities</span>
+              </div>
+              <p>One of the largest bar crawl and social event planning companies in the country with 1,000+ events hosted since 2017. Their Charleston crawls are massive "make your own adventure" format — lanyards, drink specials, multiple bars, and mid-party meetups. Great for bachelorette groups who want structure without a rigid schedule.</p>
+              <div class="bss-card-links">
+                <a href="https://crawlwith.us/charleston/" class="bss-btn bss-btn-gold" target="_blank">Crawl With US</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6">
+            <div class="bss-card">
+              <div class="bss-card-icon">🎃</div>
+              <h3>Official Bar Crawl Series</h3>
+              <div class="bss-meta">
+                <span class="bss-tag">Holiday Crawls</span>
+                <span class="bss-tag">Year-Round</span>
+              </div>
+              <p>The official holiday crawl series running Halloween, St. Patrick's Day, 4th of July, Cinco de Mayo, Thanksgiving Eve, and 90s vs Y2K themed nights across King Street. Up to 1,500+ crawlers per event, DJs at every stop, and $1,000+ costume prize money at Halloween. Tickets always sell out — book early.</p>
+              <div class="bss-card-links">
+                <a href="https://www.eventbrite.com/d/sc--charleston/bar-crawl/" class="bss-btn bss-btn-gold" target="_blank">All Upcoming Crawls</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6">
+            <div class="bss-card">
+              <div class="bss-card-icon">🎉</div>
+              <h3>Barcrawlerz / Zocha Group</h3>
+              <div class="bss-meta">
+                <span class="bss-tag">Upscale Events</span>
+                <span class="bss-tag">NYE Specialist</span>
+              </div>
+              <p>Zocha Group runs Barcrawlerz — one of Charleston's most polished crawl experiences. Known for their legendary NYE bar crawl on King Street, running 6 PM to 2 AM with specialty drink menus and premium event swag. Good option for groups that want a more upscale crawl vibe.</p>
+              <div class="bss-card-links">
+                <a href="https://www.zochagroup.com/event/charleston-bar-crawl-nye/" class="bss-btn bss-btn-gold" target="_blank">Zocha Group Events</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6">
+            <div class="bss-card">
+              <div class="bss-card-icon">🎟️</div>
+              <h3>Building 64 Live Shows</h3>
+              <div class="bss-meta">
+                <span class="bss-tag">Concert Venue</span>
+                <span class="bss-tag">Navy Yard</span>
+              </div>
+              <p>Beyond private events, Building 64 hosts a rotating calendar of live concerts and DJ nights — past headliners include Wu-Tang's Ghostface Killah. Check the events page or their concert schedule for touring acts, local showcases, and one-off production nights at the Navy Yard campus.</p>
+              <div class="bss-card-links">
+                <a href="https://www.building64.com/events" class="bss-btn bss-btn-gold" target="_blank">Building 64 Events</a>
+                <a href="https://concerts50.com/venues/usa/north-charleston-sc/building-64" class="bss-btn bss-btn-outline" target="_blank">Concert Schedule</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6">
+            <div class="bss-card">
+              <div class="bss-card-icon">🎫</div>
+              <h3>Charleston Eventbrite Scene</h3>
+              <div class="bss-meta">
+                <span class="bss-tag">All Genres</span>
+                <span class="bss-tag">All Budgets</span>
+              </div>
+              <p>The single best place to see every bar crawl, live show, themed night, and pop-up event hitting Charleston. From the $15k Adult Easter Egg Hunt on King Street to the Charleston Pride Bar Crawl to midget wrestling — Charleston's wild event calendar lives on Eventbrite.</p>
+              <div class="bss-card-links">
+                <a href="https://www.eventbrite.com/d/sc--charleston/bars-nightclubs/" class="bss-btn bss-btn-gold" target="_blank">Charleston Nightlife Events</a>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+    
+        <!-- ══ BIG SHOW VENUES ══ -->
+        <div class="bss-divider">
+          <div class="bss-divider-line"></div>
+          <span class="bss-divider-label">Big Show Venues</span>
+          <div class="bss-divider-line"></div>
+        </div>
+    
+        <div class="row g-3">
+    
+          <div class="col-lg-3 col-md-6">
+            <div class="bss-card">
+              <div class="bss-card-icon">🎸</div>
+              <h3>Charleston Music Hall</h3>
+              <p>Historic venue for major concerts, comedy, theater, and dance — diverse lineups from jazz and blues to indie rock. The city's premier ticketed show destination.</p>
+              <div class="bss-card-links">
+                <a href="https://charlestonmusichall.com/" class="bss-btn bss-btn-outline" target="_blank">Charleston Music Hall</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-6">
+            <div class="bss-card">
+              <div class="bss-card-icon">💃</div>
+              <h3>Republic Garden &amp; Lounge</h3>
+              <p>Charleston's #1 nightclub and setting for Bravo's <em>Southern Hospitality</em>. King Street's biggest dance floor, bottle service, and DJ nights till 2 AM.</p>
+              <div class="bss-card-links">
+                <a href="https://republicreign.com/" class="bss-btn bss-btn-outline" target="_blank">Republic Garden</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-6">
+            <div class="bss-card">
+              <div class="bss-card-icon">🎧</div>
+              <h3>Trio Nightclub</h3>
+              <p>Charleston's top EDM and electronic nightclub — hosted A-list DJs including Dillon Francis and Don Diablo. Arrive early or book a table for big nights.</p>
+              <div class="bss-card-links">
+                <a href="https://www.trioclubcharleston.com/" class="bss-btn bss-btn-outline" target="_blank">Trio Nightclub</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-3 col-md-6">
+            <div class="bss-card">
+              <div class="bss-card-icon">🎤</div>
+              <h3>Charleston Pour House</h3>
+              <p>A beloved local and touring acts concert venue in a laid-back bar setting. Live music nearly every night — one of Charleston's most consistent spots for live shows.</p>
+              <div class="bss-card-links">
+                <a href="https://charlestonpourhouse.com/" class="bss-btn bss-btn-outline" target="_blank">Pour House</a>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+    
+      </div>
+    </section>
+    <!-- /Charleston Big Shows & Bar Crawls Section -->
