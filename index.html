@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charleston's Dance Club | NightClubs Charleston SC | Charleston Club Deco</title>
+    <title>NightClubs Charleston SC | Charleston Club Deco</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -44,7 +44,7 @@
             z-index: 1;
             transform: translateX(-50%) translateY(-50%);
             object-fit: cover;
-            opacity: 0.5; /* Lower opacity to make text pop */
+            opacity: 0.5;
         }
 
         .hero-section .overlay {
@@ -53,7 +53,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            background: rgba(0, 0, 0, 0.5);
             z-index: 2;
         }
 
@@ -70,7 +70,7 @@
             letter-spacing: 1.5px;
             color: #fff;
         }
-        
+
         @media (max-width: 768px) {
             .hero-content h1 {
                 font-size: 3.5rem;
@@ -81,19 +81,19 @@
         .content-section {
             padding: 80px 0;
         }
-        
+
         .section-title {
             font-family: 'Playfair Display', serif;
-            color: #d4af37; /* A classy gold color */
+            color: #d4af37;
             margin-bottom: 2rem;
             font-size: 2.75rem;
         }
-        
+
         .highlight-text {
             color: #d4af37;
             font-weight: bold;
         }
-        
+
         .custom-card {
             background-color: #111;
             border: 1px solid #333;
@@ -114,7 +114,7 @@
             padding: 12px 30px;
             transition: all 0.3s ease;
         }
-        
+
         .btn-gold:hover {
             background-color: #c8a435;
             border-color: #c8a435;
@@ -127,6 +127,38 @@
             background-color: #111;
             padding: 30px 0;
             border-top: 1px solid #333;
+        }
+
+        /* --- EDM venue cards --- */
+        #edm-venues .card {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        #edm-venues .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+        }
+
+        #edm-venues .feature-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #edm-venues .list-unstyled li {
+            margin-bottom: 0.5rem;
+            padding-left: 0.5rem;
+        }
+
+        #edm-venues .btn {
+            transition: all 0.3s ease;
+        }
+
+        #edm-venues .btn:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -141,18 +173,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="charleston-bachelorette-weekend.html">Bachelorette</a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="events.html">Events</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="charleston-bachelorette-weekend.html">Bachelorettes Charleston</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="bach-girls-night-out.html">Girls Night</a>
                     </li>
                 </ul>
             </div>
@@ -186,242 +211,168 @@
         </section>
 
         <!-- Charleston EDM Dance Venues Section -->
-<section id="edm-venues" class="py-5 bg-light">
-    <div class="container">
-        <div class="row mb-4">
-            <div class="col-lg-12 text-center">
-                <h2 class="display-4 text-black mb-3">Charleston EDM & Dance Venues</h2>
-                <p class="lead text-muted">Experience the best electronic dance music and nightlife in Charleston</p>
-            </div>
-        </div>
+        <section id="edm-venues" class="py-5 bg-light">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="display-4 text-black mb-3">Charleston EDM & Dance Venues</h2>
+                        <p class="lead text-muted">Experience the best electronic dance music and nightlife in Charleston</p>
+                    </div>
+                </div>
 
-        <div class="row g-4">
-            <!-- Republic Garden & Lounge -->
-            <div class="col-lg-6 col-md-6">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="feature-icon bg-primary bg-gradient text-white rounded-3 p-3 me-3">
-                                <i class="bi bi-music-note-beamed fs-4"></i>
+                <div class="row g-4">
+                    <!-- Republic Garden & Lounge -->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature-icon bg-primary bg-gradient text-white rounded-3 p-3 me-3">
+                                        <i class="bi bi-music-note-beamed fs-4"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Republic Garden & Lounge</h3>
+                                </div>
+                                <p class="card-text">Charleston's top day & nightclub featuring world-class DJs spinning Top 40's, techno, and electronic music. Featured on Bravo's "Southern Hospitality."</p>
+
+                                <ul class="list-unstyled mb-3">
+                                    <li><i class="bi bi-geo-alt text-primary"></i> <strong>Location:</strong> 462 King St</li>
+                                    <li><i class="bi bi-clock text-primary"></i> <strong>Hours:</strong> Mon-Tue 4pm-2am, Wed-Sun 12pm-2am</li>
+                                    <li><i class="bi bi-person text-primary"></i> <strong>Capacity:</strong> Up to 318 guests</li>
+                                    <li><i class="bi bi-stars text-primary"></i> <strong>Features:</strong> VIP tables, outdoor garden patio, live DJs nightly at 10pm</li>
+                                </ul>
+
+                                <div class="d-grid gap-2">
+                                    <a href="https://republicreign.com/" class="btn btn-primary" target="_blank">Visit Website</a>
+                                </div>
                             </div>
-                            <h3 class="card-title h4 mb-0">Republic Garden & Lounge</h3>
                         </div>
-                        <p class="card-text">Charleston's top day & nightclub featuring world-class DJs spinning Top 40's, techno, and electronic music. Featured on Bravo's "Southern Hospitality."</p>
-                        
-                        <ul class="list-unstyled mb-3">
-                            <li><i class="bi bi-geo-alt text-primary"></i> <strong>Location:</strong> 462 King St</li>
-                            <li><i class="bi bi-clock text-primary"></i> <strong>Hours:</strong> Mon-Tue 4pm-2am, Wed-Sun 12pm-2am</li>
-                            <li><i class="bi bi-person text-primary"></i> <strong>Capacity:</strong> Up to 318 guests</li>
-                            <li><i class="bi bi-stars text-primary"></i> <strong>Features:</strong> VIP tables, outdoor garden patio, live DJs nightly at 10pm</li>
-                        </ul>
+                    </div>
 
-                        <div class="d-grid gap-2">
-                            <a href="https://republicreign.com/" class="btn btn-primary" target="_blank">
-                                Visit Website
-                            </a>
+                    <!-- Music Farm -->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature-icon bg-success bg-gradient text-white rounded-3 p-3 me-3">
+                                        <i class="bi bi-headphones fs-4"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Music Farm</h3>
+                                </div>
+                                <p class="card-text">Premier live music venue hosting 200+ shows annually featuring EDM, rock, hip-hop, and indie artists. Intimate setting with excellent acoustics.</p>
+
+                                <ul class="list-unstyled mb-3">
+                                    <li><i class="bi bi-geo-alt text-success"></i> <strong>Location:</strong> 32 Ann St</li>
+                                    <li><i class="bi bi-clock text-success"></i> <strong>Hours:</strong> Varies by event</li>
+                                    <li><i class="bi bi-person text-success"></i> <strong>Capacity:</strong> 800 people</li>
+                                    <li><i class="bi bi-stars text-success"></i> <strong>Features:</strong> Standing room floor, balcony seating, major touring artists</li>
+                                </ul>
+
+                                <div class="d-grid gap-2">
+                                    <a href="https://www.musicfarm.com/" class="btn btn-success" target="_blank">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frontier Lounge -->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature-icon bg-warning bg-gradient text-dark rounded-3 p-3 me-3">
+                                        <i class="bi bi-disc fs-4"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Frontier Lounge</h3>
+                                </div>
+                                <p class="card-text">Vibrant Disco-Western-themed lounge in Downtown Charleston. Features live music, DJs, and a lighted dance floor with plenty of room to dance.</p>
+
+                                <ul class="list-unstyled mb-3">
+                                    <li><i class="bi bi-geo-alt text-warning"></i> <strong>Location:</strong> Downtown Charleston</li>
+                                    <li><i class="bi bi-clock text-warning"></i> <strong>Hours:</strong> Varies by event</li>
+                                    <li><i class="bi bi-stars text-warning"></i> <strong>Features:</strong> Disco-western theme, lighted dance floor, live DJs</li>
+                                    <li><i class="bi bi-info-circle text-warning"></i> <strong>Formerly:</strong> Mynt</li>
+                                </ul>
+                                <div class="d-grid gap-2">
+                                    <a href="https://www.instagram.com/frontierlounge" class="btn btn-success" target="_blank">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Charleston Pour House -->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature-icon bg-info bg-gradient text-white rounded-3 p-3 me-3">
+                                        <i class="bi bi-boombox fs-4"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Charleston Pour House</h3>
+                                </div>
+                                <p class="card-text">More lowkey venue that hosts EDM concerts and events alongside other genres. Great for a more relaxed nightlife experience with quality music.</p>
+
+                                <ul class="list-unstyled mb-3">
+                                    <li><i class="bi bi-geo-alt text-info"></i> <strong>Location:</strong> James Island</li>
+                                    <li><i class="bi bi-stars text-info"></i> <strong>Features:</strong> Full bar, menu, rotating EDM events</li>
+                                    <li><i class="bi bi-music-note text-info"></i> <strong>Vibe:</strong> Casual, lowkey atmosphere</li>
+                                </ul>
+                                <div class="d-grid gap-2">
+                                    <a href="https://charlestonpourhouse.com" class="btn btn-success" target="_blank">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- On Air -->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="feature-icon bg-primary bg-gradient text-white rounded-3 p-3 me-3">
+                                        <i class="bi bi-speaker fs-4"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">On Air</h3>
+                                </div>
+                                <p class="card-text">Downtown Charleston new hidden gem featuring live music with upstairs area for that Nashville experience. Rotating lineup playing various genres including EDM and electronic.</p>
+
+                                <ul class="list-unstyled mb-3">
+                                    <li><i class="bi bi-geo-alt text-primary"></i> <strong>Location:</strong> 565 King Street</li>
+                                    <li><i class="bi bi-stars text-primary"></i> <strong>Features:</strong> Live music focus, rotating DJs, local artist showcases</li>
+                                    <li><i class="bi bi-music-note text-primary"></i> <strong>Vibe:</strong> Unique, intimate atmosphere</li>
+                                </ul>
+                                <div class="d-grid gap-2">
+                                    <a href="https://onairchs.club/" class="btn btn-success" target="_blank">Visit Website</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Charleston Nightclub -->
-            <div class="col-lg-6 col-md-6">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="feature-icon bg-danger bg-gradient text-white rounded-3 p-3 me-3">
-                                <i class="bi bi-vinyl fs-4"></i>
-                            </div>
-                            <h3 class="card-title h4 mb-0">Deco</h3>
-                        </div>
-                        <p class="card-text">Charleston's largest nightclub with the biggest dance floor in downtown. Features world-class DJs, Art inspired design, and state-of-the-art sound system.</p>
-                        
-                        <ul class="list-unstyled mb-3">
-                            <li><i class="bi bi-geo-alt text-danger"></i> <strong>Location:</strong> 28 Ann St</li>
-                            <li><i class="bi bi-clock text-danger"></i> <strong>Hours:</strong> Thu-Sat 9pm-2am</li>
-                            <li><i class="bi bi-person text-danger"></i> <strong>Capacity:</strong> 5,000 sq ft dance floor, up to 299 guests</li>
-                            <li><i class="bi bi-stars text-danger"></i> <strong>Features:</strong> VIP bottle service, connected to parking deck</li>
-                        </ul>
-
-                        <div class="d-grid gap-2">
-                            <a href="https://www.decocharleston.com/" class="btn btn-danger" target="_blank">
-                                Visit Website
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Music Farm -->
-            <div class="col-lg-6 col-md-6">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="feature-icon bg-success bg-gradient text-white rounded-3 p-3 me-3">
-                                <i class="bi bi-headphones fs-4"></i>
-                            </div>
-                            <h3 class="card-title h4 mb-0">Music Farm</h3>
-                        </div>
-                        <p class="card-text">Premier live music venue hosting 200+ shows annually featuring EDM, rock, hip-hop, and indie artists. Intimate setting with excellent acoustics.</p>
-                        
-                        <ul class="list-unstyled mb-3">
-                            <li><i class="bi bi-geo-alt text-success"></i> <strong>Location:</strong> 32 Ann St</li>
-                            <li><i class="bi bi-clock text-success"></i> <strong>Hours:</strong> Varies by event</li>
-                            <li><i class="bi bi-person text-success"></i> <strong>Capacity:</strong> 800 people</li>
-                            <li><i class="bi bi-stars text-success"></i> <strong>Features:</strong> Standing room floor, balcony seating, major touring artists</li>
-                        </ul>
-
-                        <div class="d-grid gap-2">
-                            <a href="https://www.musicfarm.com/" class="btn btn-success" target="_blank">
-                                Visit Website
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Frontier Lounge -->
-            <div class="col-lg-6 col-md-6">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="feature-icon bg-warning bg-gradient text-dark rounded-3 p-3 me-3">
-                                <i class="bi bi-disc fs-4"></i>
-                            </div>
-                            <h3 class="card-title h4 mb-0">Frontier Lounge</h3>
-                        </div>
-                        <p class="card-text">Vibrant Disco-Western-themed lounge in Downtown Charleston. Features live music, DJs, and a lighted dance floor with plenty of room to dance.</p>
-                        
-                        <ul class="list-unstyled mb-3">
-                            <li><i class="bi bi-geo-alt text-warning"></i> <strong>Location:</strong> Downtown Charleston</li>
-                            <li><i class="bi bi-clock text-warning"></i> <strong>Hours:</strong> Varies by event</li>
-                            <li><i class="bi bi-stars text-warning"></i> <strong>Features:</strong> Disco-western theme, lighted dance floor, live DJs</li>
-                            <li><i class="bi bi-info-circle text-warning"></i> <strong>Formerly:</strong> Mynt</li>
-                        </ul>
-                        <div class="d-grid gap-2">
-                            <a href="https://www.instagram.com/frontierlounge" class="btn btn-success" target="_blank">
-                                Visit Website
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Charleston Pour House -->
-            <div class="col-lg-6 col-md-6">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="feature-icon bg-info bg-gradient text-white rounded-3 p-3 me-3">
-                                <i class="bi bi-boombox fs-4"></i>
-                            </div>
-                            <h3 class="card-title h4 mb-0">Charleston Pour House</h3>
-                        </div>
-                        <p class="card-text">More lowkey venue that hosts EDM concerts and events alongside other genres. Great for a more relaxed nightlife experience with quality music.</p>
-                        
-                        <ul class="list-unstyled mb-3">
-                            <li><i class="bi bi-geo-alt text-info"></i> <strong>Location:</strong> James Island</li>
-                            <li><i class="bi bi-stars text-info"></i> <strong>Features:</strong> Full bar, menu, rotating EDM events</li>
-                            <li><i class="bi bi-music-note text-info"></i> <strong>Vibe:</strong> Casual, lowkey atmosphere</li>
-                        </ul>
-                        <div class="d-grid gap-2">
-                            <a href="https://charlestonpourhouse.com" class="btn btn-success" target="_blank">
-                                Visit Website
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- On Air -->
-            <div class="col-lg-6 col-md-6">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="feature-icon bg-primary bg-gradient text-white rounded-3 p-3 me-3">
-                                <i class="bi bi-speaker fs-4"></i>
-                            </div>
-                            <h3 class="card-title h4 mb-0">On Air</h3>
-                        </div>
-                        <p class="card-text">Downtown Charleston new hidden gem featuring live music with upstairs area for that Nashville experience. Rotating lineup playing various genres including EDM and electronic.</p>
-                        
-                        <ul class="list-unstyled mb-3">
-                            <li><i class="bi bi-geo-alt text-primary"></i> <strong>Location:</strong> 565 King Street</li>
-                            <li><i class="bi bi-stars text-primary"></i> <strong>Features:</strong> Live music focus, rotating DJs, local artist showcases</li>
-                            <li><i class="bi bi-music-note text-primary"></i> <strong>Vibe:</strong> Unique, intimate atmosphere</li>
-                        </ul>
-                        <div class="d-grid gap-2">
-                            <a href="https://onairchs.club/" class="btn btn-success" target="_blank">
-                                Visit Website
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Quick Tips -->
-        <div class="row mt-5">
-            <div class="col-lg-12">
-                <div class="card border-0 bg-gradient text-white" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                    <div class="card-body p-4">
-                        <h4 class="card-title text-white mb-3"><i class="bi bi-lightbulb"></i> Charleston EDM Scene Tips</h4>
-                        <div class="row">
-                            <div class="col-md-4 mb-3">
-                                <h5 class="h6 text-white"><i class="bi bi-check-circle"></i> Dress Code</h5>
-                                <p class="mb-0 small">Most venues require business casual or cocktail attire after 10pm. Dress to impress!</p>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <h5 class="h6 text-white"><i class="bi bi-ticket"></i> Book Ahead</h5>
-                                <p class="mb-0 small">VIP tables and bottle service fill up fast on weekends. Reserve in advance for the best experience.</p>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <h5 class="h6 text-white"><i class="bi bi-calendar-check"></i> Peak Times</h5>
-                                <p class="mb-0 small">Clubs are busiest Thursday-Saturday nights. Arrive early or expect lines after 11pm.</p>
+                <!-- Quick Tips -->
+                <div class="row mt-5">
+                    <div class="col-lg-12 bg-black">
+                        <div class="card border-0 bg-gradient text-white" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <div class="card-body p-4">
+                                <h4 class="card-title text-white mb-3"><i class="bi bi-lightbulb"></i> Charleston EDM Scene Tips</h4>
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <h5 class="h6 text-white"><i class="bi bi-check-circle"></i> Dress Code</h5>
+                                        <p class="mb-0 small">Most venues require business casual or cocktail attire after 10pm. Dress to impress!</p>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <h5 class="h6 text-white"><i class="bi bi-ticket"></i> Book Ahead</h5>
+                                        <p class="mb-0 small">VIP tables and bottle service fill up fast on weekends. Reserve in advance for the best experience.</p>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <h5 class="h6 text-white"><i class="bi bi-calendar-check"></i> Peak Times</h5>
+                                        <p class="mb-0 small">Clubs are busiest Thursday-Saturday nights. Arrive early or expect lines after 11pm.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Optional: Add Bootstrap Icons CDN if not already included -->
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"> -->
-
-<style>
-    #edm-venues .card {
-        transition: all 0.3s ease;
-        overflow: hidden;
-    }
-
-    #edm-venues .card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
-    }
-
-    #edm-venues .feature-icon {
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #edm-venues .list-unstyled li {
-        margin-bottom: 0.5rem;
-        padding-left: 0.5rem;
-    }
-
-    #edm-venues .btn {
-        transition: all 0.3s ease;
-    }
-
-    #edm-venues .btn:hover {
-        transform: scale(1.05);
-    }
-</style>
+        </section>
 
         <!-- Gallery Snippet -->
         <section class="content-section bg-dark">
@@ -440,6 +391,236 @@
             </div>
         </section>
 
+        <!-- Charleston Nightlife Idea List Section -->
+        <section id="nightlife-ideas" class="py-5">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="display-4 mb-3">Charleston Nightlife Ideas</h2>
+                        <p class="lead text-muted">From dance floors to rooftops — the best of the Holy City after dark</p>
+                    </div>
+                </div>
+
+                <!-- Category: Nightclubs -->
+                <h4 class="text-uppercase text-muted mb-3 mt-4" style="letter-spacing:.08em; font-size:.85rem;">💃 Nightclubs &amp; Dance</h4>
+                <div class="row g-4 mb-4">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">Republic Garden &amp; Lounge</h3>
+                                <p class="card-text">Charleston's premier high-energy nightclub and setting for Bravo's <em>Southern Hospitality</em>. King Street's hottest dance floor, bottle service, and DJ nights till 2 AM.</p>
+                                <a href="https://republicreign.com/" class="btn btn-primary btn-sm" target="_blank">Republic Website</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">Trio Nightclub</h3>
+                                <p class="card-text">Charleston's OG nightclub and home to the best EDM nights in the area. Has hosted Dillon Francis, Don Diablo, and Shiba San. Arrive early or book a table.</p>
+                                <a href="https://www.trioclubcharleston.com/" class="btn btn-primary btn-sm" target="_blank">Trio Nightclub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">The Commodore</h3>
+                                <p class="card-text">A vintage jazz club with a swanky atmosphere, great dance floor, comfy booths, and a touch of funk. One of Charleston's most beloved classic nightlife spots.</p>
+                                <a href="https://www.yelp.com/biz/the-commodore-charleston" class="btn btn-primary btn-sm" target="_blank">Find on Yelp</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Category: Rooftop Bars -->
+                <h4 class="text-uppercase text-muted mb-3 mt-4" style="letter-spacing:.08em; font-size:.85rem;">🌆 Rooftop Bars</h4>
+                <div class="row g-4 mb-4">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">The Rooftop at The Vendue</h3>
+                                <p class="card-text">Charleston's original rooftop bar — multiple bars, harbor views, and the easiest spot for a last-minute sunset. A local favorite and bachelorette staple.</p>
+                                <a href="https://thevendue.com/eat-drink/the-rooftop/" class="btn btn-primary btn-sm" target="_blank">The Vendue Rooftop</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">Fiat Lux — Hotel Bennett</h3>
+                                <p class="card-text">Stunning views from atop Hotel Bennett on Marion Square. Pre-mixed espresso martinis, bar bites, and the only rooftop bar in Charleston with a big-screen TV for sports.</p>
+                                <a href="https://www.hotelbennett.com/dining/fiat-lux/" class="btn btn-primary btn-sm" target="_blank">Fiat Lux</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">Élevé — Grand Bohemian Hotel</h3>
+                                <p class="card-text">Situated atop the Grand Bohemian Hotel, Élevé is widely considered the best rooftop dining experience in Charleston — an expansive full restaurant menu with views to match.</p>
+                                <a href="https://www.elevecharleston.com/" class="btn btn-primary btn-sm" target="_blank">Élevé Rooftop</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Category: Live Music & Jazz -->
+                <h4 class="text-uppercase text-muted mb-3 mt-4" style="letter-spacing:.08em; font-size:.85rem;">🎷 Live Music &amp; Jazz</h4>
+                <div class="row g-4 mb-4">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">Forte Jazz Lounge</h3>
+                                <p class="card-text">Smooth jazz, classic cocktails, and an intimate, elegant setting. Consistently rated one of the top nightlife spots in Charleston for a sophisticated evening out.</p>
+                                <a href="https://www.fortejazzlounge.com/" class="btn btn-primary btn-sm" target="_blank">Forte Jazz Lounge</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">Prohibition Charleston</h3>
+                                <p class="card-text">Live music seven nights a week on King Street — Sufferin Moses on Tuesdays, New Music Thursdays (no cover), bluegrass brunch on weekends. Three bars plus a heated outdoor patio.</p>
+                                <a href="https://www.prohibitioncharleston.com/" class="btn btn-primary btn-sm" target="_blank">Prohibition Charleston</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">Charleston Pour House</h3>
+                                <p class="card-text">A beloved local concert venue and bar where local bands and national touring acts take the stage nightly. Laid-back vibe, enthusiastic crowds, and great beer selection.</p>
+                                <a href="https://charlestonpourhouse.com/" class="btn btn-primary btn-sm me-2" target="_blank">Pour House</a>
+                                <a href="https://www.bandsintown.com/c/charleston-sc" class="btn btn-outline-secondary btn-sm" target="_blank">All Upcoming Shows</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Category: Wine & Cocktail Bars -->
+                <h4 class="text-uppercase text-muted mb-3 mt-4" style="letter-spacing:.08em; font-size:.85rem;">🍷 Wine &amp; Cocktail Bars</h4>
+                <div class="row g-4 mb-4">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">Graft Wine Shop &amp; Wine Bar</h3>
+                                <p class="card-text">Curated reds, whites, and rosés in a relaxed uptown setting at 700 King St. Charcuterie, tinned seafood, and regular Good Neighbor Sunday parking lot parties.</p>
+                                <a href="https://www.graftwine.com/" class="btn btn-primary btn-sm" target="_blank">Graft Wine Bar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">Camellias Champagne Bar</h3>
+                                <p class="card-text">Named Food Network's "Most Instagrammable Restaurant in South Carolina" — Charleston's premier champagne bar. The ultimate spot to pop bottles for a bachelorette celebration.</p>
+                                <a href="https://www.camelliasbar.com/" class="btn btn-primary btn-sm" target="_blank">Camellias</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">The Gin Joint</h3>
+                                <p class="card-text">A 1920s-inspired speakeasy-style bar with an expansive list of classic cocktails. Not sure where to start? Ask for the "Bartender's Choice" — you won't be disappointed.</p>
+                                <a href="https://www.theginjoint.com/" class="btn btn-primary btn-sm" target="_blank">The Gin Joint</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Category: Breweries & Distilleries -->
+                <h4 class="text-uppercase text-muted mb-3 mt-4" style="letter-spacing:.08em; font-size:.85rem;">🍺 Breweries &amp; Distilleries</h4>
+                <div class="row g-4 mb-4">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">Edmund's Oast Brewing Co.</h3>
+                                <p class="card-text">A 20,000 sq ft brewery, restaurant, and taproom producing a wide variety of craft beers. One of the definitive brewery experiences in the Lowcountry.</p>
+                                <a href="https://edmundsoast.com/" class="btn btn-primary btn-sm" target="_blank">Edmund's Oast</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">Holy City Brewing</h3>
+                                <p class="card-text">20,000 sq ft brewhouse and taproom on 4.5 acres beside Noisette Creek. Live music outdoors, wood-fired kitchen, and 27 taps — a full evening destination in itself.</p>
+                                <a href="https://holycitybrewing.com/" class="btn btn-primary btn-sm" target="_blank">Holy City Brewing</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">Firefly Distillery</h3>
+                                <p class="card-text">Charleston's oldest working distillery near Park Circle — birthplace of the world's first Sweet Tea Vodka. Live music events, food trucks, cocktail tastings, and 25+ spirits.</p>
+                                <a href="https://fireflydistillery.com/" class="btn btn-primary btn-sm" target="_blank">Firefly Distillery</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Category: Only in Charleston -->
+                <h4 class="text-uppercase text-muted mb-3 mt-4" style="letter-spacing:.08em; font-size:.85rem;">✨ Only in Charleston</h4>
+                <div class="row g-4 mb-4">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">Charleston Ghost Tours</h3>
+                                <p class="card-text">On weekends the Historic District's cobblestone alleys come alive (and haunted) after dark. Ghost tours are a bachelorette party favorite — eerie, fun, and totally Charleston.</p>
+                                <a href="https://www.charlestonghosttours.com/" class="btn btn-primary btn-sm me-2" target="_blank">Book a Ghost Tour</a>
+                                <a href="https://www.trolleytours.com/charleston" class="btn btn-outline-secondary btn-sm" target="_blank">Trolley Tours</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">Scotty Doesn't Know Speakeasy</h3>
+                                <p class="card-text">Tucked away with true speakeasy energy — one of South Carolina's best-kept secrets. True to the name, you have to find it. A bachelorette group favorite for the experience alone.</p>
+                                <a href="https://www.yelp.com/biz/scotty-doesnt-know-speakeasy-charleston" class="btn btn-primary btn-sm" target="_blank">Find on Yelp</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title h5 mb-2">Theatre 99 — Improv Comedy</h3>
+                                <p class="card-text">Charleston's home for improv comedy with shows every Friday and Saturday night. Grab a drink, take a seat, and get ready to laugh until it hurts. Great for mixed groups.</p>
+                                <a href="https://theatre99.com/" class="btn btn-primary btn-sm" target="_blank">Theatre 99</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- /Charleston Nightlife Idea List Section -->
 
         <!-- Special Events Section -->
         <section class="content-section">
@@ -450,311 +631,13 @@
                             <h2 class="section-title">Unforgettable Private Events</h2>
                             <p class="lead mb-4">Our dynamic venue is the perfect backdrop for truly unique entertainment. Nightclubs offer an electrifying atmosphere for private parties and special performances like high-energy <span class="highlight-text">drag shows</span>, captivating <span class="highlight-text">burlesque revues</span>, and thrilling <span class="highlight-text">revues</span>. These shows bring an unparalleled level of excitement and professionalism, creating a memorable experience for any celebration, from <a href="charleston-bachelorette-weekend.html">Charleston bachelorette parties</a> to birthdays.</p>
                             <p class="mb-4">While Charleston has an amazing entertainment scene, it currently lacks a weekly Charleston male revue. For those looking to hire top-tier talent for a <a href="events.html">private event</a>, the best option in the city is <span class="highlight-text"> <a href="https://michaelatyourplace.com">Michael At Your Place in Charleston, SC</a></span> 8433609438. He provides professional and entertaining performances perfect for making your night unforgettable.</p>
-                            <a href="https://michaelafterdark.com" target="_blank" class="btn btn-gold btn-lg">Book Entertainment Now</a>
                         </div>
+
+                       
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Charleston Nightlife Idea List Section -->
-<!-- Drop this in place of or after your burlesque section -->
-<section id="nightlife-ideas" class="py-5">
-    <div class="container">
-      <div class="row mb-4">
-        <div class="col-lg-12 text-center">
-          <h2 class="display-4 mb-3">Charleston Nightlife Ideas</h2>
-          <p class="lead text-muted">From burlesque to rooftops — the best of the Holy City after dark</p>
-        </div>
-      </div>
-  
-      <!-- Category: Burlesque & Live Shows -->
-      <h4 class="text-uppercase text-muted mb-3 mt-4" style="letter-spacing:.08em; font-size:.85rem;">🎭 Burlesque &amp; Live Shows</h4>
-       
-      <!-- Category: Male Entertainment -->
-      <h4 class="text-uppercase text-muted mb-3 mt-4" style="letter-spacing:.08em; font-size:.85rem;">🕺 Male Entertainment</h4>
-      <div class="row g-4 mb-4">
-  
-        <div class="col-lg-6 col-md-6">
-          <div class="card h-100 shadow-sm border-primary">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">Michael at Your Place <span class="badge bg-primary ms-1" style="font-size:.7rem;">Top Pick</span></h3>
-              <p class="card-text">Charleston's top private male entertainer for bachelorette parties and girls' nights out. Serves Charleston, Mount Pleasant, Folly Beach, Isle of Palms, and the broader Lowcountry — he comes to you.</p>
-              <a href="https://michaelatyourplace.com" class="btn btn-primary btn-sm me-2" target="_blank">Book Michael</a>
-            </div>
-          </div>
-        </div>
-  
-      </div>
-  
-      <!-- Category: Nightclubs -->
-      <h4 class="text-uppercase text-muted mb-3 mt-4" style="letter-spacing:.08em; font-size:.85rem;">💃 Nightclubs &amp; Dance</h4>
-      <div class="row g-4 mb-4">
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">Republic Garden &amp; Lounge</h3>
-              <p class="card-text">Charleston's premier high-energy nightclub and setting for Bravo's <em>Southern Hospitality</em>. King Street's hottest dance floor, bottle service, and DJ nights till 2 AM.</p>
-              <a href="https://republicreign.com/" class="btn btn-primary btn-sm" target="_blank">Republic Website</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">Trio Nightclub</h3>
-              <p class="card-text">Charleston's OG nightclub and home to the best EDM nights in the area. Has hosted Dillon Francis, Don Diablo, and Shiba San. Arrive early or book a table.</p>
-              <a href="https://www.trioclubcharleston.com/" class="btn btn-primary btn-sm" target="_blank">Trio Nightclub</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">The Commodore</h3>
-              <p class="card-text">A vintage jazz club with a swanky atmosphere, great dance floor, comfy booths, and a touch of funk. One of Charleston's most beloved classic nightlife spots.</p>
-              <a href="https://www.yelp.com/biz/the-commodore-charleston" class="btn btn-primary btn-sm" target="_blank">Find on Yelp</a>
-            </div>
-          </div>
-        </div>
-  
-      </div>
-  
-      <!-- Category: Rooftop Bars -->
-      <h4 class="text-uppercase text-muted mb-3 mt-4" style="letter-spacing:.08em; font-size:.85rem;">🌆 Rooftop Bars</h4>
-      <div class="row g-4 mb-4">
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">The Rooftop at The Vendue</h3>
-              <p class="card-text">Charleston's original rooftop bar — multiple bars, harbor views, and the easiest spot for a last-minute sunset. A local favorite and bachelorette staple.</p>
-              <a href="https://thevendue.com/eat-drink/the-rooftop/" class="btn btn-primary btn-sm" target="_blank">The Vendue Rooftop</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">Fiat Lux — Hotel Bennett</h3>
-              <p class="card-text">Stunning views from atop Hotel Bennett on Marion Square. Pre-mixed espresso martinis, bar bites, and the only rooftop bar in Charleston with a big-screen TV for sports.</p>
-              <a href="https://www.hotelbennett.com/dining/fiat-lux/" class="btn btn-primary btn-sm" target="_blank">Fiat Lux</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">Élevé — Grand Bohemian Hotel</h3>
-              <p class="card-text">Situated atop the Grand Bohemian Hotel, Élevé is widely considered the best rooftop dining experience in Charleston — an expansive full restaurant menu with views to match.</p>
-              <a href="https://www.elevecharleston.com/" class="btn btn-primary btn-sm" target="_blank">Élevé Rooftop</a>
-            </div>
-          </div>
-        </div>
-  
-      </div>
-  
-      <!-- Category: Live Music & Jazz -->
-      <h4 class="text-uppercase text-muted mb-3 mt-4" style="letter-spacing:.08em; font-size:.85rem;">🎷 Live Music &amp; Jazz</h4>
-      <div class="row g-4 mb-4">
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">Forte Jazz Lounge</h3>
-              <p class="card-text">Smooth jazz, classic cocktails, and an intimate, elegant setting. Consistently rated one of the top nightlife spots in Charleston for a sophisticated evening out.</p>
-              <a href="https://www.fortejazzlounge.com/" class="btn btn-primary btn-sm" target="_blank">Forte Jazz Lounge</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">Prohibition Charleston</h3>
-              <p class="card-text">Live music seven nights a week on King Street — Sufferin Moses on Tuesdays, New Music Thursdays (no cover), bluegrass brunch on weekends. Three bars plus a heated outdoor patio.</p>
-              <a href="https://www.prohibitioncharleston.com/" class="btn btn-primary btn-sm" target="_blank">Prohibition Charleston</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">Charleston Pour House</h3>
-              <p class="card-text">A beloved local concert venue and bar where local bands and national touring acts take the stage nightly. Laid-back vibe, enthusiastic crowds, and great beer selection.</p>
-              <a href="https://charlestonpourhouse.com/" class="btn btn-primary btn-sm me-2" target="_blank">Pour House</a>
-              <a href="https://www.bandsintown.com/c/charleston-sc" class="btn btn-outline-secondary btn-sm" target="_blank">All Upcoming Shows</a>
-            </div>
-          </div>
-        </div>
-  
-      </div>
-  
-      <!-- Category: Wine & Cocktail Bars -->
-      <h4 class="text-uppercase text-muted mb-3 mt-4" style="letter-spacing:.08em; font-size:.85rem;">🍷 Wine &amp; Cocktail Bars</h4>
-      <div class="row g-4 mb-4">
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">Graft Wine Shop &amp; Wine Bar</h3>
-              <p class="card-text">Curated reds, whites, and rosés in a relaxed uptown setting at 700 King St. Charcuterie, tinned seafood, and regular Good Neighbor Sunday parking lot parties.</p>
-              <a href="https://www.graftwine.com/" class="btn btn-primary btn-sm" target="_blank">Graft Wine Bar</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">Camellias Champagne Bar</h3>
-              <p class="card-text">Named Food Network's "Most Instagrammable Restaurant in South Carolina" — Charleston's premier champagne bar. The ultimate spot to pop bottles for a bachelorette celebration.</p>
-              <a href="https://www.camelliasbar.com/" class="btn btn-primary btn-sm" target="_blank">Camellias</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">The Gin Joint</h3>
-              <p class="card-text">A 1920s-inspired speakeasy-style bar with an expansive list of classic cocktails. Not sure where to start? Ask for the "Bartender's Choice" — you won't be disappointed.</p>
-              <a href="https://www.theginjoint.com/" class="btn btn-primary btn-sm" target="_blank">The Gin Joint</a>
-            </div>
-          </div>
-        </div>
-  
-      </div>
-  
-      <!-- Category: Breweries & Distilleries -->
-      <h4 class="text-uppercase text-muted mb-3 mt-4" style="letter-spacing:.08em; font-size:.85rem;">🍺 Breweries &amp; Distilleries</h4>
-      <div class="row g-4 mb-4">
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">Edmund's Oast Brewing Co.</h3>
-              <p class="card-text">A 20,000 sq ft brewery, restaurant, and taproom producing a wide variety of craft beers. One of the definitive brewery experiences in the Lowcountry.</p>
-              <a href="https://edmundsoast.com/" class="btn btn-primary btn-sm" target="_blank">Edmund's Oast</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">Holy City Brewing</h3>
-              <p class="card-text">20,000 sq ft brewhouse and taproom on 4.5 acres beside Noisette Creek. Live music outdoors, wood-fired kitchen, and 27 taps — a full evening destination in itself.</p>
-              <a href="https://holycitybrewing.com/" class="btn btn-primary btn-sm" target="_blank">Holy City Brewing</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">Firefly Distillery</h3>
-              <p class="card-text">Charleston's oldest working distillery near Park Circle — birthplace of the world's first Sweet Tea Vodka. Live music events, food trucks, cocktail tastings, and 25+ spirits.</p>
-              <a href="https://fireflydistillery.com/" class="btn btn-primary btn-sm" target="_blank">Firefly Distillery</a>
-            </div>
-          </div>
-        </div>
-  
-      </div>
-  
-      <!-- Category: Only in Charleston -->
-      <h4 class="text-uppercase text-muted mb-3 mt-4" style="letter-spacing:.08em; font-size:.85rem;">✨ Only in Charleston</h4>
-      <div class="row g-4 mb-4">
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">Charleston Ghost Tours</h3>
-              <p class="card-text">On weekends the Historic District's cobblestone alleys come alive (and haunted) after dark. Ghost tours are a bachelorette party favorite — eerie, fun, and totally Charleston.</p>
-              <a href="https://www.charlestonghosttours.com/" class="btn btn-primary btn-sm me-2" target="_blank">Book a Ghost Tour</a>
-              <a href="https://www.trolleytours.com/charleston" class="btn btn-outline-secondary btn-sm" target="_blank">Trolley Tours</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">Scotty Doesn't Know Speakeasy</h3>
-              <p class="card-text">Tucked away with true speakeasy energy — one of South Carolina's best-kept secrets. True to the name, you have to find it. A bachelorette group favorite for the experience alone.</p>
-              <a href="https://www.yelp.com/biz/scotty-doesnt-know-speakeasy-charleston" class="btn btn-primary btn-sm" target="_blank">Find on Yelp</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title h5 mb-2">Theatre 99 — Improv Comedy</h3>
-              <p class="card-text">Charleston's home for improv comedy with shows every Friday and Saturday night. Grab a drink, take a seat, and get ready to laugh until it hurts. Great for mixed groups.</p>
-              <a href="https://theatre99.com/" class="btn btn-primary btn-sm" target="_blank">Theatre 99</a>
-            </div>
-          </div>
-        </div>
-  
-      </div>
-      <!-- End idea list -->
-  
-    </div>
-  </section>
-  <!-- /Charleston Nightlife Idea List Section -->
-
-        <!-- Additional Info -->
-        <div class="row mt-5">
-            <div class="col-lg-12">
-                <div class="alert alert-info" role="alert">
-                    <h4 class="alert-heading"><i class="bi bi-info-circle-fill"></i> Perfect For</h4>
-                    <p class="mb-0">Bachelorette parties, bachelor parties, date nights, girls' night out, birthday celebrations, and more! These shows offer a unique blend of entertainment combining dance, comedy, circus acts, and theatrical performances. Charleston SC does not have male strip clubs but it does have many females strip clubs. 28 Ann Street Charleston SC does not host adult clubs due to city tough laws.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Optional: Add Bootstrap Icons CDN if not already included in your site -->
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"> -->
-
-<style>
-    #burlesque-shows .card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: none;
-    }
-
-    #burlesque-shows .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-    }
-
-    #burlesque-shows .card-title {
-        color: #333;
-        font-weight: 600;
-    }
-
-    #burlesque-shows .btn-primary {
-        background-color: #dc3545;
-        border-color: #dc3545;
-    }
-
-    #burlesque-shows .btn-primary:hover {
-        background-color: #c82333;
-        border-color: #bd2130;
-    }
-
-    #burlesque-shows .text-primary {
-        color: #dc3545 !important;
-    }
-</style>
     </main>
 
     <!-- Footer -->
